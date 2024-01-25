@@ -1,6 +1,5 @@
 package com.example.branchlistproject.composables
 
-import android.util.Log
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
@@ -19,7 +18,6 @@ fun BranchNavHost(modifier: Modifier = Modifier,
     NavHost(modifier = modifier, navController = navController, startDestination = startDestination){
         composable("branchesList"){
             BranchList(branchesList = branchesList, onClick = {
-                Log.i("CHECK_ID", "$it")
                 navController.navigate("branchDetails/$it")})
         }
         composable("branchDetails/{branchId}"){
