@@ -43,8 +43,8 @@ import com.example.branchlistproject.ui.theme.BranchListProjectTheme
 
 @Composable
 fun BranchCard(modifier: Modifier = Modifier, bankBranch: BankBranch, onClick: (Int) -> Unit){
-    var favorite = remember {
-        mutableStateOf(false)
+    val favorite = remember {
+        mutableStateOf(bankBranch.favorite)
     }
     Card (modifier = Modifier
         .fillMaxWidth()
@@ -89,15 +89,3 @@ fun onFavClick(favorite: MutableState<Boolean>, branch: BankBranch){
     branch.favorite = favorite.value
 }
 
-@Preview(showBackground = true)
-@Composable
-fun BranchCardPreview() {
-    BranchListProjectTheme {
-//        BranchCard(bankBranch = BankBranch(1, "AlKhalidiya Branch", Type.ATM,
-//            "AlKhalidiya, near the Co-Op", "243354576",
-//            "9:00 - 5:00",
-//            "https://www.google.com/maps/place/%D8%A8%D9%8A%D8%AA+%D8%A7%D9%84%D8%AA%D9%85%D9%88%D9%8A%D9%84+%D8%A7%D9%84%D9%83%D9%88%D9%8A%D8%AA%D9%8A+-+%D9%81%D8%B1%D8%B9+%D8%A7%D9%84%D8%AE%D8%A7%D9%84%D8%AF%D9%8A%D8%A9%E2%80%AD/@29.328966,47.964459,15z/data=!4m2!3m1!1s0x0:0x90397b151c0c8a59?sa=X&ved=2ahUKEwibxeeCi_aDAxXd9gIHHQjRBRkQ_BJ6BAhOEAA",
-//            R.drawable.go,
-//        ),)
-    }
-}
