@@ -10,8 +10,7 @@ val Purple40 = Color(0xFF6650a4)
 val PurpleGrey40 = Color(0xFF625b71)
 val Pink40 = Color(0xFF7D5260)
 
-val DarkGreen = Color(0xFF006704)
+val DarkGreen = Color(0xFF007C4C)
 
-val Gold = Color(0xFFFFC107)
-
-val Disabled = Color(0xD8CACACA)
+val Gold = Color(0xFFFFB300)
+val Disabled = Color(0xBFA7A7A7)
